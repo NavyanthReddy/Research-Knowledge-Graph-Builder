@@ -1,0 +1,49 @@
+{
+  "name": "gaussian-splatting-knowledge-graph",
+  "version": "1.0.0",
+  "description": "Agentic system for building knowledge graph from Gaussian Splatting research papers",
+  "main": "dist/pipeline/orchestrator.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/pipeline/orchestrator.js",
+    "dev": "ts-node src/pipeline/orchestrator.ts",
+    "verify": "ts-node src/scripts/verifySetup.ts",
+    "test:pipeline": "ts-node src/scripts/testPipeline.ts",
+    "demo:queries": "ts-node src/scripts/runQueries.ts",
+    "process": "ts-node src/scripts/processCorpus.ts",
+    "process:test": "ts-node src/scripts/processCorpus.ts --count 5",
+    "process:full": "ts-node src/scripts/processCorpus.ts --count 100",
+    "validate:data": "ts-node src/scripts/validateData.ts",
+    "benchmark": "ts-node src/scripts/benchmark.ts",
+    "query": "ts-node src/queries/queryExample.ts",
+    "query-3dgs": "ts-node src/queries/query3DGS.ts",
+    "ask": "ts-node src/queries/askQuestion.ts",
+    "test-llama": "ts-node src/test/testLlama.ts",
+    "test-entity-extraction": "ts-node src/test/testEntityExtraction.ts",
+    "test-relationship-extraction": "ts-node src/test/testRelationshipExtraction.ts",
+    "setup-db": "psql -U postgres -f src/database/schema.sql"
+  },
+  "keywords": [
+    "gaussian-splatting",
+    "knowledge-graph",
+    "nlp",
+    "research-papers"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@huggingface/inference": "^4.13.3",
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/pdf-parse": "^1.1.1",
+    "@types/pg": "^8.10.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

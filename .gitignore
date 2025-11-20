@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (NEVER commit)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Generated reports
+reports/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Database dumps
+*.sql.dump
+*.dump
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
